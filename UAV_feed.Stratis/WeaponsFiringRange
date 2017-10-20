@@ -1,0 +1,29 @@
+BIS_insideTrigger = true;
+_handler = [
+  player, BIS_weaponsFiringRange_board,
+  [
+      BIS_weaponsFiringRange_1_target_1, BIS_weaponsFiringRange_1_target_2, BIS_weaponsFiringRange_1_target_3, BIS_weaponsFiringRange_1_target_4, BIS_weaponsFiringRange_1_target_5
+    ], "WeaponsFiringRangeLane1",
+    format [
+      "%1 %2", localize "STR_A3_MP_Bootcamp_Lane_WeaponsRange", 1
+    ], BIS_weaponsFiringRange_1_trigger, 60, 5, true, true, false, false, nil, BIS_weaponsFiringRange_1_observer
+  ] execFSM "fsms\firingRange.fsm";
+  if
+    (isNil
+      { BIS_weaponsFiringRange_1_observer getVariable "BIS_shooter"
+    }) then
+    { _handler = [BIS_weaponsFiringRange_1_target_1,
+      [getPosASL BIS_weaponsFiringRange_1_target_1, getPosASL BIS_weaponsFiringRange_1_target_1_end]
+      , [3, 4],
+      { !isNil { BIS_insideTrigger
+    } }]
+  spawn BIS_fnc_targetSlide;
+  _handler = [
+    BIS_weaponsFiringRange_1_target_2,
+      [
+      getPosASL BIS_weaponsFiringRange_1_target_2, getPosASL BIS_weaponsFiringRange_1_target_2_end
+    ], [3, 4],
+    { !isNil { BIS_insideTrigger }
+    }] spawn BIS_fnc_targetSlide;
+     _handler = [
+      BIS_weaponsFiringRange_1_target_3, [getPosASL BIS_weaponsFiringRange_1_target_3, getPosASL BIS_weaponsFiringRange_1_target_3_end], [3, 4], { !isNil { BIS_insideTrigger } }] spawn BIS_fnc_targetSlide; _handler = [BIS_weaponsFiringRange_1_target_4, [getPosASL BIS_weaponsFiringRange_1_target_4, getPosASL BIS_weaponsFiringRange_1_target_4_end], [3, 4], { !isNil { BIS_insideTrigger } }] spawn BIS_fnc_targetSlide; _handler = [BIS_weaponsFiringRange_1_target_5, [getPosASL BIS_weaponsFiringRange_1_target_5, getPosASL BIS_weaponsFiringRange_1_target_5_end], [3, 4], { !isNil { BIS_insideTrigger } }] spawn BIS_fnc_targetSlide; };
