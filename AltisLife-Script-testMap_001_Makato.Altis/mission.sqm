@@ -5,17 +5,17 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=129;
 	class ItemIDProvider
 	{
-		nextID=8;
+		nextID=10;
 	};
 	class Camera
 	{
-		pos[]={3685.4927,12.869198,13120.608};
-		dir[]={-0.89485824,-0.056784637,0.44278139};
-		up[]={-0.050915871,0.99839032,0.025193101};
-		aside[]={0.44349799,-4.1676685e-008,0.89630944};
+		pos[]={3626.6306,30.910528,13115.491};
+		dir[]={0.91077632,-0.36592451,0.19162178};
+		up[]={0.35810766,0.93064016,0.075344399};
+		aside[]={0.20590381,-7.6121069e-007,-0.97864854};
 	};
 };
 binarizationWanted=0;
@@ -25,13 +25,14 @@ addons[]=
 	"A3_Structures_F_Heli_Items_Electronics",
 	"A3_Structures_F_Civ_InfoBoards",
 	"A3_Structures_F_Argo",
-	"A3_Structures_F_Heli_Furniture"
+	"A3_Structures_F_Heli_Furniture",
+	"A3_Weapons_F_Ammoboxes"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=4;
+		items=5;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -57,6 +58,13 @@ class AddonsMetaData
 		{
 			className="A3_Structures_F_Argo";
 			name="Arma 3 Malden - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -89,7 +97,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=5;
+		items=6;
 		class Item0
 		{
 			dataType="Group";
@@ -102,8 +110,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3689.0154,11.125732,13150.729};
-						angles[]={0,1.5844319,0};
+						position[]={3683.0903,11.368258,13119.434};
+						angles[]={0,5.921834,0};
 					};
 					side="West";
 					flags=7;
@@ -129,13 +137,13 @@ class Mission
 				angles[]={6.2819405,4.7180033,6.276535};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				name="GCS_Monitor_1";
 			};
 			id=4;
 			type="Land_FlatTV_01_F";
+			atlOffset=0.84769344;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -165,8 +173,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3672.7429,11.918462,13150.616};
-				angles[]={0,0.5755223,0};
+				position[]={3675.9873,12.318201,13125.159};
+				angles[]={0,5.4579935,0};
 			};
 			side="Empty";
 			flags=5;
@@ -175,7 +183,6 @@ class Mission
 			};
 			id=5;
 			type="Land_Billboard_F";
-			atlOffset=0.0070009232;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -226,12 +233,52 @@ class Mission
 				angles[]={6.2815294,1.5786074,0.0017263351};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 			};
 			id=7;
 			type="Land_OfficeChair_01_F";
+			atlOffset=0.61850739;
+		};
+		class Item5
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3675.5764,11.309317,13117.826};
+				angles[]={6.2778621,0,0.013334315};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [""AmmoboxInit"",[this,true]] spawn BIS_fnc_arsenal;";
+			};
+			id=9;
+			type="Box_NATO_AmmoVeh_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };
