@@ -1,0 +1,142 @@
+version=53;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class ItemIDProvider
+	{
+		nextID=7;
+	};
+	class Camera
+	{
+		pos[]={2793.6919,111.54308,5992.5654};
+		dir[]={-0.58401865,-0.59414679,0.55309713};
+		up[]={-0.43139029,0.80435753,0.40855044};
+		aside[]={0.68762642,1.1990778e-007,0.72606784};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"A3_Characters_F",
+	"A3_Structures_F_Mil_Helipads"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=2;
+		class Item0
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Structures_F_Mil";
+			name="Arma 3 - Military Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+randomSeed=13550006;
+class ScenarioData
+{
+	author="MakatoMiela";
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=26;
+		hour=24;
+		minute=0;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=3;
+		class Item0
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2553.2888,84.523026,5604.8828};
+					};
+					side="West";
+					flags=3;
+					class Attributes
+					{
+						isPlayer=1;
+					};
+					id=3;
+					type="B_officer_F";
+					atlOffset=0.27758026;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=2;
+			atlOffset=0.27758026;
+		};
+		class Item1
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2733.7095,16.657627,6072.8071};
+				angles[]={0,3.4971757,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="Mak_start_1";
+			};
+			id=5;
+			type="Land_HelipadCivil_F";
+			atlOffset=14.616396;
+		};
+		class Item2
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2539.6079,85.611206,5585.667};
+				angles[]={0.067404613,0.25715682,0.092240646};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="Mak_start_2";
+			};
+			id=6;
+			type="Land_HelipadCivil_F";
+		};
+	};
+};

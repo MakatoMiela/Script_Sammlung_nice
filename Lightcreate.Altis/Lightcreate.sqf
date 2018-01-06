@@ -53,7 +53,14 @@ if (_funktion == "red") then {
 	} forEach _objekt;
 };
 
-
+//Lichkegel erzeugen boden ???!!!!
+_light setLightAttenuation [
+/*start*/             10,
+/*constant*/          50,
+/*linear*/            50,
+/*quadratic*/         2000,
+/*hardlimitstart*/    50,
+/* hardlimitend*/     100];
 
 
 /*
